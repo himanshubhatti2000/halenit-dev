@@ -116,8 +116,15 @@
         border-radius: 13px;
         box-shadow: inset 0 0 0 0  #28b463 ;
         transition: ease-out 0.3s;
-        margin-top: 10px;
+    
     }
+    input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: #fff !important;
+}
 
     .my-button:hover{
         box-shadow: inset 300px 0 0 0  #28b463;
@@ -162,14 +169,36 @@
     /*reviews*/
     .reviews-container{
         background-color: #151515;
-        height: 500px;
+        
 
     }
     .review-card{
-        height: 240px;
+        min-height: 240px;
         width:330px;
         border-radius: 25px;
         background-color: white;
+        padding: 40px 20px;
+        box-sizing:border-box 
+    }
+    .review-text{
+        line-height:  15pt;
+        padding: 10px 10px;
+        box-sizing:border-box ;
+    }
+    .user{
+        display: flex;
+        align-items: center;
+    }
+    .user h1{
+        font-size: 19px;
+        font-weight: bold;
+        color: #0073B6;
+        padding-left: 10px;
+    }
+    .user img{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
     }
     .reviews{
         width: 1024px;
@@ -344,32 +373,76 @@
     font-size: 20px;
 }
 /*Features */
-.flex-container> div{
-
+.features{
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    background-color: #151515;
 }
-.empty1{
-    flex-grow: 1;
-}
 
-.empty2{
-    flex-grow: 8;
+.feature-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
 }
 .feature{
-    flex-grow: 1;
+    width: 1024px;
+    margin: 0 auto;
+    height: 250px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  
+  
 }
+.feature-info{
+    width: 30%;
+    min-height: 160px;
+    width: 100%;
+}
+.one{
+    padding-right: 20%;
+}
+.two{
+    padding-left: 20%;
+}
+.feature-info h1{
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.feature-img{
+    background-color: white;
+    border: 2px solid #0073B6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.feature-img img{
+
+}
+
 /*Contact-us*/
 .contact-container{
     width: 1024px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 .social-media{
     width: 50%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
-
+.social-media img{
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .contact-main{
     display: flex;
     justify-content: space-between;
@@ -377,12 +450,13 @@
 .tel-img{
     width: 50%;
     height: 400px;
-    background-color: #28b463;
+    background-image: url('../assests//images/tel.jpg');
+    background-size: cover;
+    border-radius: 20px;
 }
 .tel-info{
-    width: 45%;
-    background-color: pink;
-    padding-left: 5%;
+    width: 40%;
+    padding-left: 10%;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -391,19 +465,28 @@
 .tel-info h1{
     font-weight: bold;
     font-size: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 13px;
 }
 .tel-info p{
     font-size: 20px;
+    line-height: 20pt;
 }
 .tel-ico{
     padding-top: 10px;
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
+}
+.tel-ico img{
+    height: 50px;
+}
+.contact-line{
+    margin-top: 50px;
+    font-size: 15px;
 }
 /*Log in*/
-.portal-heading{
+/*.portal-heading{
     width: 1024px;
     background-color: #0073B6;
     margin: 0 auto;
@@ -446,4 +529,107 @@
     color: #0073B6;
     cursor: pointer;
     font-weight: bold;
+}*/
+.portal-heading{
+    text-align: center;
+    background-color: #0073B6;
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
+.log-in{
+    width: 400px;
+    margin: 0 auto;
+}
+.sign-up{
+    width: 400px;
+    margin: 0 auto;
+ 
+}
+.portal-container{
+    padding-top: 50px;
+    padding-bottom:50px;
+    background-image: url('../assests/images/portal-back.jpg');
+    background-size: cover;
+}
+.portal{
+    margin-top: 30px;
+    margin-bottom:30px;
+    background-color: #15151582;
+     border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.portal-form{
+    display: flex;
+    justify-content: center;
+   
+
+}
+.portal-form form{
+    display: flex;
+    flex-direction: column;
+}
+.portal-form input{
+    width: 240px;
+    border: none;
+    background: transparent;
+    height:30px;
+    outline: none;
+    padding: 1 px 5px;
+   color: white;
+}
+.input-border{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 32px;
+    border: 2px solid white;
+    border-radius: 24px;
+    margin-bottom: 20px;
+}
+.portal-form label{
+    padding-left: 10px;
+}
+.input-border input:-webkit-autofill:focus {
+    background-color: transparent;
+    color: transparent;
+}
+
+.portal-submit{
+    width: 150px;
+    height: 50px;
+    border:  3px;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+    
+}
+
+.change{
+    border: none;
+    background: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    padding-top: 10px;
+    font-style: none;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.form-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    font-size: 10px;
+    font-weight: lighter;
+} 
+

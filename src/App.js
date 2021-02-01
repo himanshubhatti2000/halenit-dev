@@ -10,6 +10,7 @@ import Features from './Components/Features'
 import ContactPage from './Components/ContactPage'
 import Portal from './Components/Portal'
 import History from './History'
+import SignUp from './Components/SignUp'
 class App extends Component{
     render(){
         return(
@@ -20,7 +21,8 @@ class App extends Component{
                <Route path='/' exact component={Homepage}/>
                <Route path='/features' component={Features}/>
                <Route path='/contact-us' component={ContactPage}/>
-               <Route path='/portal' component={Portal}/>
+               <Route path='/portal' exact component={Portal}/>
+               <Route path='/portal/sign-up' component={SignUp}/>
            </Switch>
            <Footer/>
             </div> 
