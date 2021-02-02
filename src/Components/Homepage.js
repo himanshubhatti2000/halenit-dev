@@ -6,7 +6,7 @@ class Homepage extends Component{
         return(
             <div className="top-section-container">
                     <div className="top-section">
-                        <img src={laptopImage} className="laptop-image" alt="laptop" />
+                        <div><img src={laptopImage} className="laptop-image" alt="laptop" /></div>
                         <div className="hero-box">
                             <div className="content">
                                 <h1 className="best">BEST</h1>

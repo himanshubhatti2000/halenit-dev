@@ -11,7 +11,7 @@ function ContactPage(){
         <div>
             <HeadingContainer title="CONTACT US" desc="sfdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsfdsfds" loc="img" />
             <div className="contact-container">
-            <div className="social-media">
+            <div className="social-media-contact">
                 <img src={insta} alt="instagram"/>
                 <img src={twitter} alt="twitter"/>
                 <img src={fb} alt="facebook"/>
@@ -20,8 +20,9 @@ function ContactPage(){
                 <div className="tel-img">
                 </div>
                 <div className="tel-info">
+                <div className="tel-desc">
                     <h1>Obaasasasds</h1>
-                    <div className="tel-desc">
+                    
                         <p>0660-43 18 00 <br/>
                         Järnvägsgatan 8 <br/>
                         Box 221,891 25 Örnsköldsvik</p>
