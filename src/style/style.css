@@ -785,6 +785,36 @@ input:-webkit-autofill:active {
     cursor: pointer;
     font-weight: bold;
 }*/
+
+#hidePassword{
+    display: none;
+}
+.show-hide{
+    background: url('../assests/images/portal/hide.svg') no-repeat;
+    left: 0px;
+    width: 13px;
+    height: 13px;
+    margin-top: 5px;
+}
+#hidePassword:checked ~ .show-hide{
+    background: url('../assests/images/portal/show.svg') no-repeat;
+    left: 0px;
+    width: 13px;
+    height: 13px;
+    margin-top: 5px;
+}
+
+.myClass{
+    background: url('../assests/images/portal/show.svg') no-repeat;
+    width: 100px;
+    height: 100px;
+    border: none;
+    outline: none;
+}
+
+label{
+    margin-bottom: 5px;
+}
 .portal-heading{
     text-align: center;
     background-color: #0073B6;
@@ -797,11 +827,7 @@ input:-webkit-autofill:active {
     width: 400px;
     margin: 0 auto;
 }
-.sign-up{
-    width: 400px;
-    margin: 0 auto;
- 
-}
+
 .portal-container{
     padding-top: 50px;
     padding-bottom:50px;
@@ -816,8 +842,17 @@ input:-webkit-autofill:active {
     border-radius: 15px;
     color: white;
     margin: 0 auto;
+   
+}
+
+.sign-in-portal{
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.sign-up-portal{
+    padding-top: 60px;
+    padding-bottom: 33px;
 }
 .portal-form{
     display: flex;
@@ -829,7 +864,42 @@ input:-webkit-autofill:active {
     display: flex;
     flex-direction: column;
 }
-.portal-form input{
+.sign-up{
+    max-width: 600px;
+    margin: 0 auto;
+ 
+}
+
+.sign-up-form form{
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 600px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+.sign-up-form form input{
+    width: 200px;
+    height: 25px;
+    padding-left: 10px;
+}
+.sign-up-input-border{
+    width: 220px;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 27px;
+    margin-top: 5px;
+}
+
+
+.col{
+    margin-bottom: 15px;
+}
+
+ input{
     width: 240px;
     border: none;
     background: transparent;
@@ -871,7 +941,7 @@ input:-webkit-autofill:active {
     border: none;
     background: none;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     cursor: pointer;
     outline: none;
     padding-top: 10px;
@@ -887,4 +957,14 @@ input:-webkit-autofill:active {
     font-size: 10px;
     font-weight: lighter;
 } 
-
+.validate{
+    position: absolute;
+}
+@media(max-width:600px){
+    .sign-up-form form{
+        justify-content: center;
+    }
+    .portal {
+        border: 0px;
+    }
+}

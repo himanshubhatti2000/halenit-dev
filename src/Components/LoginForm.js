@@ -33,7 +33,7 @@ class LoginForm extends Component{
         return(
             <div className="portal-container">
             <div className="log-in">
-         <div className="portal">
+         <div className="portal sign-in-portal">
          <div className="portal-heading">
                  <h1>Sign in</h1>
              </div>
@@ -46,6 +46,9 @@ class LoginForm extends Component{
                      <label>{this.passwordText}</label>
                      <div className="input-border">
                      <input />
+                     {/*show-hide button */}
+                     <input type="checkbox" id="hidePassword" />
+                    <label htmlFor="hidePassword" className="show-hide"/>
                      </div>
                      <div className="form-buttons">
                      <button className="my-button portal-submit">{this.loginText}</button>

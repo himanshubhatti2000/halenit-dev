@@ -34,6 +34,7 @@ class Header extends Component{
             this.features="Features"
        this.portal="Portal"
        this.contact="Conact us"
+       this.call="call us"
        }
        else{
         this.features=" Funktioner"
