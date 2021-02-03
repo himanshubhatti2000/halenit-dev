@@ -5,24 +5,32 @@ import './style/style.css'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Homepage from './Components/Homepage'
-import Slider from './Components/Slider'
 import Features from './Components/Features'
 import ContactPage from './Components/ContactPage'
 import Portal from './Components/Portal'
 import History from './History'
 import SignUp from './Components/SignUp'
+import LanguageContext from './Context/LanguageContext'
 class App extends Component{
+    state={language:"english"}
+    selectLanguage=(language)=>{
+        this.setState({language: language})
+    }
     render(){
+        //console.log(this.state.language)
         return(
             <Router history={History}>
             <div className="container">
-           <Header/>
+            <LanguageContext.Provider value={{selectLanguage: this.selectLanguage, language: this.state.language}}>
+            <Header langObj={{language:this.state.language,selectLanguage: this.selectLanguage}}/>
+            </LanguageContext.Provider>
+          
            <Switch>
-               <Route path='/' exact component={Homepage}/>
-               <Route path='/features' component={Features}/>
+               <Route path='/' exact render={()=><Homepage langObj={{language:this.state.language,selectLanguage: this.selectLanguage}}/>}/>
+               <Route path='/features' render={()=><Features langObj={{language:this.state.language,selectLanguage: this.selectLanguage}}/>}/>
                <Route path='/contact-us' component={ContactPage}/>
-               <Route path='/portal' exact component={Portal}/>
-               <Route path='/portal/sign-up' component={SignUp}/>
+               <Route path='/portal' exact render={()=><Portal langObj={{language: this.state.language}}/>}/>
+               <Route path='/portal/sign-up' render={()=><SignUp langObj={{language: this.state.language}}/>}/>
            </Switch>
            <Footer/>
             </div> 

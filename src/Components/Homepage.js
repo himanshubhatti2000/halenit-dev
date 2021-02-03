@@ -2,27 +2,68 @@ import React, { Component } from 'react'
 import laptopImage from '../assests/images/aa.jpg'
 import ReviewCard from './ReviewCard'
 class Homepage extends Component{
+    constructor(){
+        super()
+        //Main Homepage line
+        this.bestHeading="BEST"
+        this.securityHeading="SECURITY"
+        this.servicesHeading="SERVICES"
+        this.getStartedButton="Get Started"
+        this.aboutUsHeading="About us"
+        this.aboutUsPara="English Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae placerat ex.Morbi iaculis orci sed turpis pellentesque, nec congue turpis efficitur.Praesent aliquet velit a rutrum hendrerit. Aliquam posuere lacus lectus, necmollis libero gravida lacinia. Fusce in tempus massa. Etiam elementumefficitur urna, quis iaculis arcu maximus non.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        this.extraTextOne="NEupro cddfdfd"
+        this.extraTextTwo="NEupro cddfdfd"
+        this.extraTextThree="NEupro cddfdfd"
+        this.rotateText="NEupro cddfdfd"
+    }
+    languageSwitch(){
+        if(this.props.langObj.language==="english"){
+            this.bestHeading="BEST"
+        this.securityHeading="SECURITY"
+        this.servicesHeading="SERVICES"
+        this.getStartedButton="Get Started"
+        this.aboutUsHeading="About us"
+        this.aboutUsPara="English Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae placerat ex.Morbi iaculis orci sed turpis pellentesque, nec congue turpis efficitur.Praesent aliquet velit a rutrum hendrerit. Aliquam posuere lacus lectus, necmollis libero gravida lacinia. Fusce in tempus massa. Etiam elementumefficitur urna, quis iaculis arcu maximus non.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        this.extraTextOne="NEupro cddfdfd"
+        this.extraTextTwo="NEupro cddfdfd"
+        this.extraTextThree="NEupro cddfdfd"
+        this.rotateText="NEupro cddfdfd"
+    }
+        else{
+            this.bestHeading="BÄSTA"
+        this.securityHeading="SÄKERHET"
+        this.servicesHeading="TJÄNSTER"
+        this.getStartedButton="Komma igång"
+        this.aboutUsHeading="Om oss"
+        this.aboutUsPara="Swedish Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae placerat ex.Morbi iaculis orci sed turpis pellentesque, nec congue turpis efficitur.Praesent aliquet velit a rutrum hendrerit. Aliquam posuere lacus lectus, necmollis libero gravida lacinia. Fusce in tempus massa. Etiam elementumefficitur urna, quis iaculis arcu maximus non.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        this.extraTextOne="SNEupro cddfdfd"
+        this.extraTextTwo="SNEupro cddfdfd"
+        this.extraTextThree="SNEupro cddfdfd"
+        this.rotateText="SNEupro cddfdfd"
+    }
+    }
     topSection(){
+        this.languageSwitch()
         return(
             <div className="top-section-container">
                     <div className="top-section">
                         <div><img src={laptopImage} className="laptop-image" alt="laptop" /></div>
                         <div className="hero-box">
                             <div className="content">
-                                <h1 className="best">BEST</h1>
-                                <h1 className="security">SECURITY</h1>
-                                <h1 className="services">SERVICES</h1>
-                                <button className="my-button">Get Started</button>
+                                <h1 className="best">{this.bestHeading}</h1>
+                                <h1 className="security">{this.securityHeading}</h1>
+                                <h1 className="services">{this.servicesHeading}</h1>
+                                <button className="my-button">{this.getStartedButton}</button>
                             </div>
                             <div className="rotate">
-                                <h1>Neque Porro</h1>
+                                <h1>{this.rotateText}</h1>
                             </div>
                         </div>
                     </div>
                     <div className="top-section-bottom">
-                        <h1>NEupro cddfdfd</h1>
-                        <h1>NEupro cddfdfd</h1>
-                        <h1>NEupro cddfdfd</h1>
+                        <h1>{this.extraTextOne}</h1>
+                        <h1>{this.extraTextTwo}</h1>
+                        <h1>{this.extraTextThree}</h1>
                     </div>
 
                 </div>
@@ -31,13 +72,9 @@ class Homepage extends Component{
     aboutUs(){
         return(<div className="about-us">
         <div >
-        <h1> About us </h1>
+        <h1> {this.aboutUsHeading} </h1>
         </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae placerat ex.
-            Morbi iaculis orci sed turpis pellentesque, nec congue turpis efficitur.
-            Praesent aliquet velit a rutrum hendrerit. Aliquam posuere lacus lectus, nec
-            mollis libero gravida lacinia. Fusce in tempus massa. Etiam elementum
-efficitur urna, quis iaculis arcu maximus non.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae placerat ex. Morbi iaculis orci sed turpis pellentesque, nec congue turpis efficitur. Praesent aliquet velit a rutrum hendrerit. Aliquam posuere lacus lectus, nec mollis libero gravida lacinia. Fusce in tempus massa. Etiam elementum efficitur urna, quis iaculis arcu maximus non.</p>
+            <p>{this.aboutUsPara} </p>
     </div>)
     }
     reviews(){
@@ -53,6 +90,7 @@ efficitur urna, quis iaculis arcu maximus non.Lorem ipsum dolor sit amet, consec
         )
     }
     render(){
+        console.log(this.props.langObj)
         return(
             <>
                 {this.topSection()}

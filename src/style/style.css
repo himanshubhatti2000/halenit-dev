@@ -71,26 +71,61 @@
    display: flex;
   
 }
+
 #check{
     display: none;
 }
-
+.svg-container{
+    background-color: #0073B6;
+    
+}
+.nav-bar div{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+.english-button{
+    background: url('../assests/images/header/english.svg') no-repeat;
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
+.swedish-button{
+    background: url('../assests/images/header/swedish.svg') no-repeat;
+    background-position: cover;
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+}
 @media(max-width: 600px){
+    .english-button{
+        box-sizing: border-box;
+        margin-left: 0px;
+        border: 3px solid #151515;
+        border-radius: 50px;
+    }
+    .swedish-button{
+        box-sizing: border-box;
+        margin-left: 0px;
+        border: 3px solid #151515;
+        border-radius: 50px;
+    }
     .tel-no{
         display: none;
     }
     .nav-bar{
+        background-color: #0073B6;
         text-align: center;
         display: flex;
-        justify-items: center;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
         position: absolute;
-        background-color: #0073B6;
         width: 100%;
         padding-top: 50px;
         padding-bottom: 50px;
         line-height: 20pt;
-        top: -100%;
+        top: -195px;
         transition: all 0.5s;
         z-index: -1;
       
@@ -107,7 +142,7 @@
     }
 
     #check:checked~ .nav-bar{
-    margin-top: 200px;
+    margin-top: 295px;
        display: flex; 
     }
     #check:checked~ .mobile-menu{
@@ -776,7 +811,7 @@ input:-webkit-autofill:active {
 .portal{
     margin-top: 30px;
     margin-bottom:30px;
-    background-color: #15151582;
+    background-color: #151515af;
      border: 2px solid white;
     border-radius: 15px;
     color: white;
