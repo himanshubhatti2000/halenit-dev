@@ -26,9 +26,9 @@ class App extends Component{
             </LanguageContext.Provider>
           
            <Switch>
-               <Route path='/' exact render={()=><Homepage langObj={{language:this.state.language,selectLanguage: this.selectLanguage}}/>}/>
-               <Route path='/features' render={()=><Features langObj={{language:this.state.language,selectLanguage: this.selectLanguage}}/>}/>
-               <Route path='/contact-us' component={ContactPage}/>
+               <Route path='/' exact render={()=><Homepage langObj={{language:this.state.language}}/>}/>
+               <Route path='/features' render={()=><Features langObj={{language:this.state.language}}/>}/>
+               <Route path='/contact-us' render={()=><ContactPage langObj={{language: this.state.language}}/>}/>
                <Route path='/portal' exact render={()=><Portal langObj={{language: this.state.language}}/>}/>
                <Route path='/portal/sign-up' render={()=><SignUp langObj={{language: this.state.language}}/>}/>
            </Switch>

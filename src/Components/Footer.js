@@ -26,15 +26,21 @@ function Footer(){
                 </div>
                 <div className="social-media-and-site">
                     <div className="social-media">
-                    <div className="insta">
-                        insta
+                        <a href="#" target="_blank">
+                        <div className="insta">
                     </div>
-                    <div className="twitter">
-                        twitter
-                    </div>
+                        </a>
+                   <a href="#" target="_blank">
+                   <div className="twitter">
+                     
+                     </div>
+                   </a>
+                    <a href="#" target="_blank">
                     <div className="fb">
-                        fb
-                    </div>
+                   
+                   </div>
+                    </a>
+                   
                     </div>
                  <div className="site">
                  © HALEN IT 2021

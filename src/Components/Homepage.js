@@ -1,21 +1,8 @@
 import React, { Component } from 'react'
 import laptopImage from '../assests/images/aa.jpg'
 import ReviewCard from './ReviewCard'
+import {reviewData} from '../Data/data'
 class Homepage extends Component{
-    constructor(){
-        super()
-        //Main Homepage line
-        this.bestHeading="BEST"
-        this.securityHeading="SECURITY"
-        this.servicesHeading="SERVICES"
-        this.getStartedButton="Get Started"
-        this.aboutUsHeading="About us"
-        this.aboutUsPara="English Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae placerat ex.Morbi iaculis orci sed turpis pellentesque, nec congue turpis efficitur.Praesent aliquet velit a rutrum hendrerit. Aliquam posuere lacus lectus, necmollis libero gravida lacinia. Fusce in tempus massa. Etiam elementumefficitur urna, quis iaculis arcu maximus non.Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        this.extraTextOne="NEupro cddfdfd"
-        this.extraTextTwo="NEupro cddfdfd"
-        this.extraTextThree="NEupro cddfdfd"
-        this.rotateText="NEupro cddfdfd"
-    }
     languageSwitch(){
         if(this.props.langObj.language==="english"){
             this.bestHeading="BEST"
@@ -78,12 +65,13 @@ class Homepage extends Component{
     </div>)
     }
     reviews(){
+        const reviewJSX=reviewData.map(i=>{
+            return <ReviewCard key={i.id} name={i.user} image={i.image} review={this.props.langObj.language==="english"?i.engReviewText: i.sweReviewText} />
+        })
         return(
             <div className="reviews-container">
                 <div className="reviews">
-                    <ReviewCard />
-                    <ReviewCard />
-                    <ReviewCard />
+                    {reviewJSX}
                 </div>
                 
             </div>

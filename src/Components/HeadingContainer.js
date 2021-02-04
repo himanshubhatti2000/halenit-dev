@@ -8,7 +8,7 @@ function HeadingContainer(props){
                             <p>{props.desc} </p>
                         </div>
                         <div className="img-file">
-                            {props.loc}
+                            <img src={props.loc} alt={props.title}/>
                         </div>
                     </div>
                 </div>
