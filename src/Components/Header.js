@@ -45,22 +45,24 @@ class Header extends Component{
     }
     componentDidMount=()=>{
         this.check=document.getElementById("check")
-        this.headerContainer=document.getElementById("headerContainer")
+        this.myBox=document.getElementById("myBox") 
+        console.log(this.myBox)
+        /*this.headerContainer=document.getElementById("headerContainer")*/
     }
-    menuButton=()=>{
-        console.log(this.headerContainer.style)
-        if(this.check.checked){
-            this.headerContainer.style.marginBottom="0px"
-           
-        }
-        else{
-            this.headerContainer.style.marginBottom="240px"
-        }
-        
-    }
+    
     navBar=()=>{
         this.check.checked=false
-        this.headerContainer.style.marginBottom="0px"
+        //this.headerContainer.style.marginBottom="0px"
+        this.myBox.style.marginTop="-240px"
+    }
+    mobileMenu=()=>{
+        console.log(this.check.checked)
+        if(this.check.checked){
+            this.myBox.style.marginTop="-240px"
+        }
+        else{
+            this.myBox.style.marginTop="0px"
+        }
     }
     render(){
         this.languageSwitch()
@@ -76,7 +78,7 @@ class Header extends Component{
                </Link>
                <input type="checkbox" id="check"/>
            <div className="tel-no">{this.call}: 43434354355</div>
-           <ul className="nav-bar" id="navBar" onClick={()=>{this.navBar()}}>
+           <ul className="nav-bar" id="navBar" onClick={(e)=>{this.navBar(e)}}>
                <div><NavLink activeClassName="selectStyle" className="nav-link" to='/features'>{this.features}</NavLink></div>
                <div><NavLink activeClassName="selectStyle" className="nav-link" to='/portal'>{this.portal}</NavLink></div>
                <div><NavLink activeClassName="selectStyle" className="nav-link" to='/contact-us'>{this.contact}</NavLink></div>
@@ -89,9 +91,11 @@ class Header extends Component{
             
             <div className="mobile-menu-hide">
             </div>
-            <label htmlFor="check" className="mobile-menu" onClick={(e)=>{this.menuButton()}}> </label>
+            <label htmlFor="check" className="mobile-menu" onClick={()=>{this.mobileMenu()}} > </label>
            </div>
            </div>
+           <div className="myBox" id="myBox">
+            </div>
             </>
         )
     }
