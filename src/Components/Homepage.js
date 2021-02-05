@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ReviewCard from './ReviewCard'
 import {reviewData} from '../Data/data'
+import {Link} from 'react-router-dom'
 class Homepage extends Component{
     languageSwitch(){
         if(this.props.langObj.language==="english"){
@@ -41,7 +42,9 @@ class Homepage extends Component{
                                 <h1 className="best">{this.bestHeading}</h1>
                                 <h1 className="security">{this.securityHeading}</h1>
                                 <h1 className="services">{this.servicesHeading}</h1>
+                                <Link to="/portal">
                                 <button className="my-button">{this.getStartedButton}</button>
+                                </Link>
                             </div>
                            { <div className="rotate">
                                 <h1>{this.rotateText}</h1>
@@ -71,11 +74,15 @@ class Homepage extends Component{
         })
         return(
             <div className="reviews-container">
-                <div className="reviews">
+                <div className="reviews-box">
+                <h1>Read what our clients says</h1>
+                <div className="reviews">                
                     {reviewJSX}
                 </div>
                 
             </div>
+                </div>
+       
         )
     }
     render(){

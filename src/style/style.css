@@ -60,7 +60,8 @@
   
 }
 .logo img{
-    width: 65%;
+    width: 200px;
+    height: 49px;
 }
 .logo-lang{
     color: rgb(255, 255, 255);
@@ -197,10 +198,11 @@
   
     }
     }
-    @media(max-width:500px){
+    @media(max-width:480px){
        
         .logo img{
-            width: 50%;
+            width: 140px;
+            height: 35px;
         }
         
         .logo h1{
@@ -333,9 +335,23 @@ input:-webkit-autofill:active {
    
     /*reviews*/
     .reviews-container{
+      
         background-color: #151515;
         
 
+    }
+    .reviews-box{
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 50px 0;
+        
+    }
+    .reviews-box h1{
+        font-size: 30px;
+        color: white;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 20px;
     }
     .review-card{
         min-height: 240px;
@@ -368,11 +384,10 @@ input:-webkit-autofill:active {
     .reviews{
         max-width: 1024px;
         margin: 0 auto;
-        padding: 50px 0;
         display: flex;
         justify-content: space-between;
     }
-    /*home-page-tablet*/
+    /*homepage-tablet*/
     @media(max-width: 768px){
        
         .laptop-image{
@@ -441,7 +456,7 @@ input:-webkit-autofill:active {
            }
            .content{
             margin-left: 0%;
-            margin-top: -100vh;
+            margin-top: -70vh;
            }
            .best{
                font-size: 3.5vh;
@@ -561,7 +576,14 @@ input:-webkit-autofill:active {
         
     }
 /*footer-mobile*/
-    @media(max-width: 500px){
+    @media(max-width: 480px){
+        .footer{
+            font-size: 3.2vw;
+            flex-direction: column;
+        }
+        .links h1{
+            font-size: 3.7vw;
+        }
         .social-media-and-site{
             margin:0 auto;
             width: 100%;

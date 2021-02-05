@@ -10,12 +10,12 @@ class ContactPage extends Component{
     languageSwitch=()=>{
        if(this.props.langObj.language==="english"){
            this.contactHeading= "CONTACT"
-           this.contactText= "Esfdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsfdsfds"
+           this.contactText= "S Lorem ipsum dolor sit amet, consectetur adipiscing elit"
            this.contactLine="Edfd gfdgf dgfdg dfgfdgfd hfhfhf hgfhfhf fhfhfh hgfhfhf hfhfh fhfhfh fhfh  jyuyu gfdggdg"
        }
        else{
         this.contactHeading= "KONTAKT"
-        this.contactText= "Ssfdfsdfdsfdsfdsfsdfdsfdsfdsfdsfdsfdsfds"
+        this.contactText= "S Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         this.contactLine="Sdfd gfdgf dgfdg dfgfdgfd hfhfhf hgfhfhf fhfhfh hgfhfhf hfhfh fhfhfh fhfh  jyuyu gfdggdg"
        }
     }

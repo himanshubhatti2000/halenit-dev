@@ -50,7 +50,7 @@ class Header extends Component{
         /*this.headerContainer=document.getElementById("headerContainer")*/
     }
     
-    navBar=()=>{
+    hideNavBar=()=>{
         this.check.checked=false
         //this.headerContainer.style.marginBottom="0px"
 
@@ -62,7 +62,7 @@ class Header extends Component{
             <div className="header-container" id="headerContainer">
            <div className="Header" id="myHeader">
            <Link to='/'>
-           <div className="logo">
+           <div className="logo" onClick={()=>{this.hideNavBar()}}>
                    <img className="logo-file" src={logo} alt="logo"/>
                 
                    <h1 className="logo-lang">{this.state.language==="english"?".com":".se"}</h1>
@@ -71,7 +71,7 @@ class Header extends Component{
                </Link>
                <input type="checkbox" id="check"/>
            <div className="tel-no">{this.call}: 43434354355</div>
-           <ul className="nav-bar" id="navBar" onClick={(e)=>{this.navBar(e)}}>
+           <ul className="nav-bar" id="navBar" onClick={()=>{this.hideNavBar()}}>
                <div><NavLink activeClassName="selectStyle" className="nav-link" to='/features'>{this.features}</NavLink></div>
                <div><NavLink activeClassName="selectStyle" className="nav-link" to='/portal'>{this.portal}</NavLink></div>
                <div><NavLink activeClassName="selectStyle" className="nav-link" to='/contact-us'>{this.contact}</NavLink></div>

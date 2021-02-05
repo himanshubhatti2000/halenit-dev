@@ -13,6 +13,7 @@ class Footer extends Component{
         }
     }
     render(){
+        this.langSwitch()
         return(
             <footer className="footer-container">
                 <div className="footer">
