@@ -577,6 +577,10 @@ input:-webkit-autofill:active {
     }
 /*footer-mobile*/
     @media(max-width: 480px){
+        .footer-container{
+            padding-left: 1%;
+            padding-right: 1%;
+        }
         .footer{
             font-size: 3.2vw;
             flex-direction: column;
