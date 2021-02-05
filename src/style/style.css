@@ -491,11 +491,8 @@ input:-webkit-autofill:active {
 
     .links{
         display: flex;
-        justify-content: space-between;
-    }
-    .links div{
-        margin-right: 30%;
-        min-width: 30%;
+        justify-content: space-between; 
+        width: 60%;
     }
 
     .links h1{
@@ -543,6 +540,9 @@ input:-webkit-autofill:active {
         .footer{
             font-size: 3.5vw;
             flex-direction: column;
+        }
+        .links{
+            width: 100%;
         }
         .links h1{
             font-size: 4vw;
