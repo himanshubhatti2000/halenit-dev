@@ -351,7 +351,6 @@ input:-webkit-autofill:active {
         color: white;
         width: 100%;
         margin: 0 auto;
-        margin-bottom: 20px;
     }
     .review-card{
         min-height: 240px;
@@ -389,7 +388,9 @@ input:-webkit-autofill:active {
     }
     /*homepage-tablet*/
     @media(max-width: 768px){
-       
+       .nav-link{
+           margin-left: 0px;
+       }
         .laptop-image{
             min-height: 474px;
         }
@@ -582,11 +583,11 @@ input:-webkit-autofill:active {
             padding-right: 1%;
         }
         .footer{
-            font-size: 2vw;
+            font-size: 2.5vw;
             flex-direction: column;
         }
         .links h1{
-            font-size: 3vw;
+            font-size: 3.5vw;
         }
         .social-media-and-site{
             margin:0 auto;
