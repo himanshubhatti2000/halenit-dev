@@ -582,11 +582,11 @@ input:-webkit-autofill:active {
             padding-right: 1%;
         }
         .footer{
-            font-size: 3.2vw;
+            font-size: 2vw;
             flex-direction: column;
         }
         .links h1{
-            font-size: 3.7vw;
+            font-size: 3vw;
         }
         .social-media-and-site{
             margin:0 auto;
