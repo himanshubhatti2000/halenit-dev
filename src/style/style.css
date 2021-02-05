@@ -9,12 +9,17 @@
 
 
 .container{
+    min-width: 320px;
     font-family: 'Segoe UI Regular';
+    
+    
 }
 /*Header */
 .header-container{
     background-color: #151515;
     transition: all 0.5s;
+  
+    
 }
 .Header{
     background-color: #151515;
@@ -27,6 +32,7 @@
     color:white;
     align-items: center;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 .selectStyle{
     background-color: #0073B6;
@@ -36,26 +42,32 @@
     padding-bottom: 3px;
 }
 .mobile-menu-hide{
+    display: none;
     position: absolute;
     width: 100%;
+    max-width: 100%;
     min-height: 100px;
-    
- 
-  
+    z-index: -5;
+    margin: 0 auto;
     background-color: #151515;
-    z-index: -1;
+ 
    
 }
+
 .logo{
     display: flex;
+    align-items: center;
   
 }
+.logo img{
+    width: 65%;
+}
 .logo-lang{
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 .logo h1{
-    margin-top: 21px;
+    margin-top: 13px;
 }
 
 
@@ -89,6 +101,7 @@
     align-items: center;
     height: 40px;
 }
+
 .english-button{
     background: url('../assests/images/header/english.svg') no-repeat;
     height: 40px;
@@ -109,13 +122,15 @@
     margin-top: 20px;
 }
 
-@media(max-width: 600px){
-    .myBox{
-        background-color: #470303;
-        width: 100%;
-        height: 240px;
-        margin-top: -240px;
-        transition: all 0.5s;
+@media(max-width: 768px){  
+    .rotate{
+        display: none;
+    }
+    .top-section{
+        padding-left: 3%;
+    }
+    .mobile-menu-hide{
+        display: block;
     }
     .selectStyle{
         background-color: #151515;
@@ -152,7 +167,7 @@
         line-height: 20pt;
         top: -155px;
         transition: all 0.5s;
-        z-index: -1;
+        z-index: -9;
       
     }
     .mobile-menu{
@@ -166,6 +181,7 @@
         width: 100%;
     }
     .header-container{
+        background-color: #151515;
         height: 100px;
     }
 
@@ -181,14 +197,24 @@
   
     }
     }
+    @media(max-width:500px){
+       
+        .logo img{
+            width: 50%;
+        }
+        
+        .logo h1{
+            margin-top: 6px;
+          
+        }
+    }
 
 
 
 /*Homepage*/
-
 .top-section-container{
     background-color: #151515;
-    min-height: 700px;
+    height: 700px;
 
 }
 .top-section{
@@ -198,10 +224,7 @@
     padding-top: 50px;
     
 }
-.laptop-image{
-    height: 500px;
-    max-width: 474px;
-}
+
 .hero-box{
     max-width: 100%;
     display: flex;
@@ -210,17 +233,17 @@
     color: white;
 }
     .best{
-        font-size: 38px;
+        font-size: 3vw;
         font-family: 'Segoe UI Regular';
      
     }
     .security{
-        font-size: 79px;
+        font-size: 6vw;
         font-family: 'Segoe UI Bold';
         font-weight: bold;
     }
     .services{
-        font-size: 79px;
+        font-size: 6vw;
         font-weight:100;
         font-family: 'Segoe UI';
     }
@@ -244,6 +267,8 @@
         cursor: pointer;
         border: none;
         width: 190px;
+        max-width: 190px;
+        margin-top: 10px;
         height: 51px;
         font-size: 22px;
         outline:none;
@@ -270,13 +295,18 @@ input:-webkit-autofill:active {
         display: flex;
         justify-content: space-between;
         margin: 100px auto 0 auto;
-
+        padding-left: 10%;
+        padding-right: 10%;
     }
-
-    .content{
-        margin-left: 40px;
+    .laptop-image img{
+        max-width: 100%;
     }
-    
+   /*.content{
+      padding: 3%;
+      box-sizing: border-box;
+        
+    }*/
+
     /* about us */
     .about-us{
         padding: 120px 0;
@@ -309,7 +339,7 @@ input:-webkit-autofill:active {
     }
     .review-card{
         min-height: 240px;
-        width:330px;
+        max-width:330px;
         border-radius: 25px;
         background-color: white;
         padding: 40px 20px;
@@ -342,15 +372,35 @@ input:-webkit-autofill:active {
         display: flex;
         justify-content: space-between;
     }
-    @media(max-width: 600px){
+    /*home-page-tablet*/
+    @media(max-width: 768px){
+       
+        .laptop-image{
+            min-height: 474px;
+        }
+        .content{
+            margin-top: -70vh;
+            margin-left: 10%;
+            background-color: #151515c4;
+            
+            padding: 10%;
+           
+        }
+        .best{
+            font-size: 5vh;
+        }
+        .security{
+            font-size: 10vh;
+        }
+        .services{
+            font-size: 10vh;
+        }
+        
         .top-section{
             flex-direction: column;
         }
         .hero-box{
-            background-color:#151515bb;
-            margin-left: 10%;
-            margin-top: -370px;
-            padding-left: 5%;
+        
             padding-top: 40px;
             padding-right: 20px;
             padding-bottom: 40px;
@@ -370,18 +420,49 @@ input:-webkit-autofill:active {
         .review-card{
             margin-bottom: 10px;
         }
-        .content{
-            margin-left: 0px;
+        .top-section-bottom{
+            margin-bottom: 30px;
+            margin-top: -50px;
+            background-color: #0073B6;
+            min-height: 20px;
+            padding: 5px;
         }
+    
         #check:checked~ .top-section-container{
             margin-top: 200px;
             }
+       }
+       @media(max-width: 480px){
+           .top-section-container{
+               height: 140vw;
+           }
+           .top-section-bottom{
+               display: none;
+           }
+           .content{
+            margin-left: 0%;
+            margin-top: -100vh;
+           }
+           .best{
+               font-size: 3.5vh;
+           }
+           .security{
+               font-size: 7vh;
+           }
+           .services{
+               font-size: 7vh;
+           }
+           .my-button{
+               width: 130px;
+               font-size: 20px;
+           }
        }
     /*Footer */
     .footer-container{
         background-color: #0073B6;
         padding-top: 35px;
         padding-bottom: 35px;
+      
     }
     .footer{
         max-width: 1024px;
@@ -389,6 +470,7 @@ input:-webkit-autofill:active {
         color: white;
         display: flex;
         justify-content: space-between;
+        font-size: 1.2vw;
     }
 
     .links{
@@ -402,7 +484,7 @@ input:-webkit-autofill:active {
 
     .links h1{
         font-weight: bolder;
-        font-size: 17px;
+        font-size: 1.3vw;
         margin-bottom: 10px;
     }
     .links h2{
@@ -433,11 +515,21 @@ input:-webkit-autofill:active {
     background-image: url('../assests/images/social/fb1.svg') ;
    }
     .site{
-        margin-top: 60%;
+        margin-top: 50%;
     }
-    @media(max-width: 600px){
+    /*footer-tablet*/
+    @media(max-width: 768px){
+        .footer-container{
+            padding-left: 2%;
+            padding-right: 2%;
+            box-sizing: border-box;
+        }
         .footer{
+            font-size: 3.5vw;
             flex-direction: column;
+        }
+        .links h1{
+            font-size: 4vw;
         }
         .links div{
             margin-right: 0%;
@@ -445,12 +537,39 @@ input:-webkit-autofill:active {
         .social-media{
             margin: 0 auto;
             width: 100%;
-            background-color: #28b463;
-           
+            margin-top: 40px;
+          
         }
         .social-media-and-site{
             margin:0 auto;
+            width: 100%;
+            padding-left: 170px;
+            padding-right: 170px;
+            box-sizing: border-box;
         }
+        .social-media div{
+            margin-left: 0px;
+        }
+        .site{
+           
+            margin: 0 auto;
+            margin-top: 40px;
+            text-align: center;
+           
+        }
+    
+        
+    }
+/*footer-mobile*/
+    @media(max-width: 500px){
+        .social-media-and-site{
+            margin:0 auto;
+            width: 100%;
+            padding-left: 90px;
+            padding-right: 90px;
+            box-sizing: border-box;
+        }
+       
     }
     /*slide */
     .slider{
@@ -573,12 +692,27 @@ input:-webkit-autofill:active {
 }
 .heading h1{
     font-weight: bold;
-    font-size: 40px;
+    font-size: 3rem;
     padding-bottom: 10px;
 }
 
 .heading p{
     font-size: 20px;
+}
+.title-dec{
+    font-size: 2rem;
+}
+.img-file img{
+    width: 100px;
+    height: 100px;
+}
+@media(max-width: 768px){
+    .heading{
+        padding-left: 2%;
+        padding-right: 2%;
+        box-sizing: border-box;
+    }
+    
 }
 /*Features */
 .features{
@@ -713,7 +847,7 @@ input:-webkit-autofill:active {
 .tel-img{
     width: 50%;
     height: 400px;
-    background-image: url('../assests/images/contact/tel1.jpg');
+    background-image: url('../assests/images/contact/tel2.jpg');
     background-size: cover;
     border-radius: 20px;
 }
@@ -753,6 +887,7 @@ input:-webkit-autofill:active {
         flex-direction: column;
     }
     .tel-img{
+        background-image: url('../assests/images/contact/tel1.jpg');
         width: 100%;
     }
     .tel-info{
@@ -793,54 +928,11 @@ input:-webkit-autofill:active {
     }
 }
 /*Log in*/
-/*.portal-heading{
-    width: 1024px;
-    background-color: #0073B6;
-    margin: 0 auto;
-}
-.portal-heading h1{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
-    font-size: large;
-    font-weight: bold;
-    color: white;
-    margin-top: 50px;
-    margin-bottom: 5px;
-}
-.login-form{
-    width: 1024px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-}
-.log-in form{
-    
-    display: flex;
-    flex-direction: column;
-}
-.login-form label{
-    margin-top: 20px;
-}
-.login-form form button{
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.create-account{
-    text-align: center;
-
-}
-.create-account button{
-    border: none;
-    padding: 3px;
-    background-color: white;
-    color: #0073B6;
-    cursor: pointer;
-    font-weight: bold;
-}*/
 .errorMessage{
     color: #ff2b2b;
     font-size: 12px;
-    position: absolute;
+    position: relative;
+
 }
 #hidePassword{
     display: none;
@@ -874,14 +966,14 @@ label{
     margin-bottom: 30px;
 }
 .log-in{
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
 .portal-container{
     padding-top: 50px;
     padding-bottom:50px;
-    background-image: url('../assests/images/portal/portal-back1.jpg');
+    background-image: url('../assests/images/portal/portal-back2.jpg');
     background-size: cover;
 }
 .portal{
@@ -954,7 +1046,8 @@ label{
     background: transparent;
     height:30px;
     outline: none;
-    padding: 1 px 5px;
+    font-size: 16px;
+    padding-left: 10px;
    color: white;
 }
 .input-border{

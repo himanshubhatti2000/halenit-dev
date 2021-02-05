@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import laptopImage from '../assests/images/aa.jpg'
 import ReviewCard from './ReviewCard'
 import {reviewData} from '../Data/data'
 class Homepage extends Component{
@@ -34,7 +33,9 @@ class Homepage extends Component{
         return(
             <div className="top-section-container">
                     <div className="top-section">
-                        <div><img src={laptopImage} className="laptop-image" alt="laptop" /></div>
+                        <div className="laptop-image">
+                            <img src="../assests/images/hero4.jpg" alt="laptop"/>
+                             </div>
                         <div className="hero-box">
                             <div className="content">
                                 <h1 className="best">{this.bestHeading}</h1>
@@ -42,16 +43,16 @@ class Homepage extends Component{
                                 <h1 className="services">{this.servicesHeading}</h1>
                                 <button className="my-button">{this.getStartedButton}</button>
                             </div>
-                            <div className="rotate">
+                           { <div className="rotate">
                                 <h1>{this.rotateText}</h1>
-                            </div>
+        </div>}
                         </div>
                     </div>
-                    <div className="top-section-bottom">
+                   <div className="top-section-bottom">
                         <h1>{this.extraTextOne}</h1>
                         <h1>{this.extraTextTwo}</h1>
                         <h1>{this.extraTextThree}</h1>
-                    </div>
+                        </div>
 
                 </div>
         )
@@ -78,7 +79,7 @@ class Homepage extends Component{
         )
     }
     render(){
-        console.log(this.props.langObj)
+        //console.log(this.props.langObj)
         return(
             <>
                 {this.topSection()}

@@ -23,7 +23,7 @@ class Features extends Component{
         }
     }
     features(){
-        console.log(this.props.langObj.language)
+        //console.log(this.props.langObj.language)
         return(
             <div className="features">
                 <div className="feature-container">

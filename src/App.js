@@ -21,9 +21,9 @@ class App extends Component{
         return(
             <Router history={History}>
             <div className="container">
-            <LanguageContext.Provider value={{selectLanguage: this.selectLanguage, language: this.state.language}}>
+           <LanguageContext.Provider value={{selectLanguage: this.selectLanguage, language: this.state.language}}>
             <Header langObj={{language:this.state.language,selectLanguage: this.selectLanguage}}/>
-            </LanguageContext.Provider>
+        </LanguageContext.Provider>
           
            <Switch>
                <Route path='/' exact render={()=><Homepage langObj={{language:this.state.language}}/>}/>
@@ -32,7 +32,7 @@ class App extends Component{
                <Route path='/portal' exact render={()=><Portal langObj={{language: this.state.language}}/>}/>
                <Route path='/portal/sign-up' render={()=><SignUp langObj={{language: this.state.language}}/>}/>
            </Switch>
-           <Footer/>
+           {<Footer langObj={{language: this.state.language}}/>}
             </div> 
             </Router>
         )

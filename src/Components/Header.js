@@ -7,7 +7,7 @@ class Header extends Component{
         //Eng Variables;
         this.features="Features"
         this.portal="Portal"
-        this.contact="Conact us"
+        this.contact="Contact us"
         this.call="call us"
     }
     state={
@@ -33,7 +33,7 @@ class Header extends Component{
         if(this.props.langObj.language==="english"){
             this.features="Features"
        this.portal="Portal"
-       this.contact="Conact us"
+       this.contact="Contact us"
        this.call="call us"
        }
        else{
@@ -45,24 +45,15 @@ class Header extends Component{
     }
     componentDidMount=()=>{
         this.check=document.getElementById("check")
-        this.myBox=document.getElementById("myBox") 
-        console.log(this.myBox)
+        
+        //console.log(this.myBox)
         /*this.headerContainer=document.getElementById("headerContainer")*/
     }
     
     navBar=()=>{
         this.check.checked=false
         //this.headerContainer.style.marginBottom="0px"
-        this.myBox.style.marginTop="-240px"
-    }
-    mobileMenu=()=>{
-        console.log(this.check.checked)
-        if(this.check.checked){
-            this.myBox.style.marginTop="-240px"
-        }
-        else{
-            this.myBox.style.marginTop="0px"
-        }
+
     }
     render(){
         this.languageSwitch()
@@ -72,8 +63,10 @@ class Header extends Component{
            <div className="Header" id="myHeader">
            <Link to='/'>
            <div className="logo">
-                   <img src={logo} alt="logo"/>
+                   <img className="logo-file" src={logo} alt="logo"/>
+                
                    <h1 className="logo-lang">{this.state.language==="english"?".com":".se"}</h1>
+                  
                </div>
                </Link>
                <input type="checkbox" id="check"/>
@@ -91,11 +84,10 @@ class Header extends Component{
             
             <div className="mobile-menu-hide">
             </div>
-            <label htmlFor="check" className="mobile-menu" onClick={()=>{this.mobileMenu()}} > </label>
+            <label htmlFor="check" className="mobile-menu"  > </label>
            </div>
            </div>
-           <div className="myBox" id="myBox">
-            </div>
+           
             </>
         )
     }

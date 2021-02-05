@@ -10,7 +10,7 @@ const emailRegex = RegExp(
     Object.values(formErrors).forEach(val => {
         val.length > 0 && (valid = false) ;
        });
-       console.log(valid)
+       //console.log(valid)
        // validate the form was filled out
        Object.values(rest).forEach(val => {
          val === null && (valid = false);
@@ -79,7 +79,7 @@ const emailRegex = RegExp(
               : "invalid email address";
             break;
           case "phoneNumber":
-            formErrors.password =
+            formErrors.phoneNumber =
             value.length < 10 ? "invalid PHone number" : "";
           break;
           case "password":
@@ -89,10 +89,10 @@ const emailRegex = RegExp(
             formErrors.password =
               value.length < 6 ? "minimum 6 characaters required" : "";
             break;
-          case "confirmPassword":
+          case "confirm Password":
                 formErrors.confirmPassword =
                  value===this.state.password ? "":"Those passwords didn’t match. Try again.";
-                  console.log(formErrors)
+                  //console.log(formErrors)
                 break;
       
           default:
@@ -111,20 +111,28 @@ const emailRegex = RegExp(
             this.confirmPasswordText="confirmPassword"
             this.loginText="Log in"
             this.createAccountText="Create account"
-            this.signInText="Sign in"
             this.signupText="Sign up"
+            this.emailPlaceHolder="example@xmail.com"
+            this.haveAccount="already have account"
+            this.submit="submit"
+            this.termsConditions="Accept terms and conditions"
+            this.showPasswordText="show Password"
         }
         else{
-            this.firstNameText="FirstName"
-            this.lastNameText="LastName"
+            this.firstNameText="Förnamn"
+            this.lastNameText="Efternamn"
             this.emailText="E-post"
-        this.phoneNumber="Phone number"
+        this.phoneNumber="Telefonnummer"
         this.passwordText="Lösenord"
-        this.loginText="Logga in"
         this.createAccountText="Skapa konto"
         this.confirmPasswordText="confirmPassword"
         this.signInText="Logga in"
         this.signupText="Bli Medlem"
+        this.emailPlaceHolder="exempel@xmail.com"
+        this.haveaccount="Har redan konto"
+        this.submit="Skicka in"
+        this.termsConditions="Acceptera villkoren"
+        this.showPasswordText="visa lösenord"
         }
     }
     componentDidMount(){
@@ -134,7 +142,7 @@ const emailRegex = RegExp(
         this.confirmPassword=document.getElementById("confirmPassword")
     }
     showPassword=e=>{
-        console.log()
+        //console.log()
         if(this.show.checked){
             this.password.type="text"
             this.confirmPassword.type="text"
@@ -153,7 +161,7 @@ const emailRegex = RegExp(
                 <div className="sign-up">
                     <div className="portal sign-up-portal">
                         <div className="portal-heading">
-                            <h1>Sign up</h1>
+                            <h1>{this.signupText}</h1>
                         </div>
                         <div className="sign-up-form">
                             <form onSubmit={(e)=>this.handleSubmit(e)}>
@@ -182,7 +190,7 @@ const emailRegex = RegExp(
                                 <div className="email">
                                     <label>{this.emailText}</label>
                                     <div className="sign-up-input-border">
-                                        <input placeholder={this.emailText}
+                                        <input placeholder={this.emailPlaceHolder}
                                             name="email"
                                             onChange={this.handleChange} />
                                     </div>
@@ -226,17 +234,17 @@ const emailRegex = RegExp(
                                 <div className="sign-up-check">
                                     <div >
                                     <input id="show-password" type="checkbox" onClick={(e)=>this.showPassword(e)}/>
-                                    <label htmlFor="show-password">Show Password</label>
+                                    <label htmlFor="show-password">{this.showPasswordText}</label>
                                     </div>
                                     <div>
                                     <input id="terms-conditions" name="termsConditions" type="checkbox" />
-                                    <label htmlFor="terms-conditions">Accept terms and conditions</label>
+                                    <label htmlFor="terms-conditions">{this.termsConditions}</label>
                                     </div>
                                     
                                     
                                 </div>
-                                <button className="my-button portal-submit" type="submit">submit</button>
-                                <Link className=" change " to="/portal" >Already have account</Link>
+                                <button className="my-button portal-submit" type="submit">{this.submit}</button>
+                                <Link className=" change " to="/portal" >{this.haveAccount}</Link>
                             </div>
                             </form>
                             

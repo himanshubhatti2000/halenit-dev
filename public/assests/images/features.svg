@@ -1,4 +1,12 @@
-<svg id="check_circle-24px" xmlns="http://www.w3.org/2000/svg" width="162.5" height="162.5" viewBox="0 0 162.5 162.5">
-  <path id="Path_223" data-name="Path 223" d="M0,0H162.5V162.5H0Z" fill="none"/>
-  <path id="Path_224" data-name="Path 224" d="M69.708,2a67.708,67.708,0,1,0,67.708,67.708A67.733,67.733,0,0,0,69.708,2ZM56.167,103.563,22.313,69.708l9.547-9.547L56.167,84.4,107.557,33.01l9.547,9.615Z" transform="translate(11.542 11.542)" fill="#fff"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="check_circle-24px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 23.5 23.5" style="enable-background:new 0 0 23.5 23.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#FFFFFF;}
+</style>
+<path id="Path_223" class="st0" d="M266.8-145.4h162.5V17.1H266.8V-145.4z"/>
+<path id="Path_224" class="st1" d="M11.8,0C5.3,0,0,5.3,0,11.8s5.3,11.8,11.8,11.8s11.8-5.3,11.8-11.8C23.5,5.3,18.3,0,11.8,0z
+	 M9.4,17.6l-5.9-5.9l1.7-1.7l4.2,4.2l8.9-8.9L20,7.1L9.4,17.6z"/>
 </svg>

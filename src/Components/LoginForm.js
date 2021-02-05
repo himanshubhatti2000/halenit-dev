@@ -55,7 +55,7 @@ class LoginForm extends Component{
             <div className="log-in">
          <div className="portal sign-in-portal">
          <div className="portal-heading">
-                 <h1>Sign in</h1>
+                 <h1>{this.signInText}</h1>
              </div>
              <div className="portal-form">
                  <form onSubmit={e=>this.submitHandler(e)}>
@@ -64,7 +64,7 @@ class LoginForm extends Component{
                      <input name="email" value={this.state.email} placeholder={this.emailText} onChange={(e)=>this.setState({email: e.target.value})} />
                      </div>
                      <label>{this.passwordText}</label>
-                     <div className="input-border">
+                     <div className="input-border" >
                      <input name="password" type="password" id="password" placeholder={this.passwordText} onChange={e=>{this.setState({password: e.target.value})}}/>
                      {/*show-hide button */}
                      <input type="checkbox" id="hidePassword" onClick={e=>this.showPassword(e)}/>
