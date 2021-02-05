@@ -51,17 +51,21 @@ class Homepage extends Component{
         </div>}
                         </div>
                     </div>
+                    <div className="scroll-button">
+                        <a href="#aboutUS"> </a>
+                    </div>
                    <div className="top-section-bottom">
                         <h1>{this.extraTextOne}</h1>
                         <h1>{this.extraTextTwo}</h1>
                         <h1>{this.extraTextThree}</h1>
                         </div>
-
+                   
                 </div>
+                
         )
     }
     aboutUs(){
-        return(<div className="about-us">
+        return(<div id="aboutUS"  className="about-us">
         <div >
         <h1> {this.aboutUsHeading} </h1>
         </div>
@@ -84,6 +88,9 @@ class Homepage extends Component{
                 </div>
        
         )
+    }
+    componentDidMount(){
+        window.scrollTo(0, 0)
     }
     render(){
         //console.log(this.props.langObj)

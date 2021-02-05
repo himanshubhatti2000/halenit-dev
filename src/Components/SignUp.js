@@ -136,6 +136,7 @@ const emailRegex = RegExp(
         }
     }
     componentDidMount(){
+        window.scrollTo(0, 0)
         this.checkBox=document.getElementById("terms-conditions")
         this.show=document.getElementById("show-password")
         this.password=document.getElementById("password")

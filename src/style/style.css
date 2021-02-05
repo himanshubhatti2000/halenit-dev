@@ -126,6 +126,7 @@
 .header-container-animation{
     background-color: #151515;
 }
+
 @media(max-width: 768px){  
     .rotate{
         display: none;
@@ -395,8 +396,12 @@ input:-webkit-autofill:active {
         display: flex;
         justify-content: space-between;
     }
+    .scroll-button{
+        display: none;
+    }
     /*homepage-tablet*/
     @media(max-width: 768px){
+        
        .nav-link{
            margin-left: 0px;
        }
@@ -458,6 +463,18 @@ input:-webkit-autofill:active {
             }
        }
        @media(max-width: 480px){
+        .scroll-button{
+            display: block;
+            width: 100%;
+            margin-top: -150px;
+            display: flex;
+            justify-content: center;
+        }
+        .scroll-button a{
+            background-image: url("../assests/images/scroll.svg");
+            height: 30px;
+            width: 30px;
+        }
            .top-section-container{
                height: 140vw;
            }
@@ -1184,7 +1201,7 @@ label{
     color: #0073B6;
     opacity: 1; /* Firefox */
   }
-@media(max-width:468px){
+@media(max-width:768px){
     .sign-up-form form{
         justify-content: center;
     }

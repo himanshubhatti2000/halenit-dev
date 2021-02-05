@@ -19,6 +19,9 @@ class ContactPage extends Component{
         this.contactLine="Sdfd gfdgf dgfdg dfgfdgfd hfhfhf hgfhfhf fhfhfh hgfhfhf hfhfh fhfhfh fhfh  jyuyu gfdggdg"
        }
     }
+    componentDidMount(){
+        window.scrollTo(0, 0)
+    }
     render(){
         this.languageSwitch()
         return(

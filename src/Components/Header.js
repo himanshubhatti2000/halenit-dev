@@ -51,7 +51,7 @@ class Header extends Component{
     }
     
     hideNavBar=()=>{
-        this.headerContainer.className=""
+        this.headerContainer.className="header-container"
         this.check.checked=false
         //this.headerContainer.style.marginBottom="0px"
 
