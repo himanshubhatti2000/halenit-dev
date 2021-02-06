@@ -15,6 +15,7 @@ class Homepage extends Component{
         this.extraTextTwo="NEupro cddfdfd"
         this.extraTextThree="NEupro cddfdfd"
         this.rotateText="NEupro cddfdfd"
+        this.reviewHeading="Read what our clients says"
     }
         else{
             this.bestHeading="BÄSTA"
@@ -27,6 +28,7 @@ class Homepage extends Component{
         this.extraTextTwo="SNEupro cddfdfd"
         this.extraTextThree="SNEupro cddfdfd"
         this.rotateText="SNEupro cddfdfd"
+        this.reviewHeading="Läs vad våra kunder säger"
     }
     }
     topSection(){
@@ -79,7 +81,7 @@ class Homepage extends Component{
         return(
             <div className="reviews-container">
                 <div className="reviews-box">
-                <h1>Read what our clients says</h1>
+                <h1 className="review-heading">{this.reviewHeading}</h1>
                 <div className="reviews">                
                     {reviewJSX}
                 </div>

@@ -360,7 +360,9 @@ input:-webkit-autofill:active {
         font-size: 30px;
         color: white;
         width: 100%;
-        margin: 0 auto;
+    }
+    .review-heading{
+        margin-bottom: 20px;
     }
     .review-card{
         min-height: 240px;
@@ -473,11 +475,13 @@ input:-webkit-autofill:active {
             display: flex;
             justify-content: center;
         }
+       
         .scroll-button a{
             background-image: url("../assests/images/scroll.svg");
             height: 30px;
             width: 30px;
         }
+        
            .top-section-container{
                height: 140vw;
            }
