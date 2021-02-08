@@ -26,34 +26,24 @@ class Features extends Component{
         //console.log(this.props.langObj.language)
         return(
             <div className="features">
-                <div className="feature-container">
-
-                    <div className="feature image-after">
-                        <div className="feature-info one">
-                            <h1>{this.firewallHeading}</h1>
-                            <p>{this.firewallPara} </p>
-                        </div>
-                        <div className="feature-img">
-                            <img src={fire} alt="fire-wall" />
-                        </div>
+                <div className="feature">
+                    <div className="feature-img">
+                    <img src={fire} alt="fire-wall" />
                     </div>
-
+                    <div className="feature-info">
+                        <h1>{this.firewallHeading}</h1>
+                        <p>{this.firewallPara}</p>
+                    </div>
                 </div>
-                <div className="feature-container ">
-
-                    <div className="feature image-normal f-mobile">
-
-                        <div className="feature-info  two">
-                            <h1>{this.securityHeading}</h1>
-                            <p>{this.securityPara}</p>
-                        </div>
-                        <div className="feature-img">
-                            <img src={security} alt="security" />
-
-                        </div>
+                <div className="feature">
+                    <div className="feature-img">
+                    <img src={security} alt="security" />
 
                     </div>
-
+                    <div className="feature-info">
+                        <h1>{this.securityHeading}</h1>
+                        <p>{this.securityPara}</p>
+                    </div>
                 </div>
             </div>
         )

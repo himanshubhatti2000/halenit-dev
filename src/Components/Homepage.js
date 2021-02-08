@@ -56,11 +56,7 @@ class Homepage extends Component{
                     <div className="scroll-button">
                         <a href="#aboutUS"> </a>
                     </div>
-                   <div className="top-section-bottom">
-                        <h1>{this.extraTextOne}</h1>
-                        <h1>{this.extraTextTwo}</h1>
-                        <h1>{this.extraTextThree}</h1>
-                        </div>
+                 
                    
                 </div>
                 
