@@ -48,6 +48,19 @@ class Header extends Component{
         this.headerContainer=document.getElementById("headerContainer")
         //console.log(this.myBox)
         /*this.headerContainer=document.getElementById("headerContainer")*/
+
+        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+        const headerContainer=document.getElementById("headerContainer")
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+               headerContainer.style.top = "0";
+            } else {
+                headerContainer.style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+        } 
     }
     
     hideNavBar=()=>{
@@ -66,6 +79,7 @@ class Header extends Component{
             this.headerContainer.className="header-container-animation"
         }
     }
+
     render(){
         this.languageSwitch()
         return(

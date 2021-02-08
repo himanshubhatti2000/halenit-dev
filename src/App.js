@@ -27,10 +27,10 @@ class App extends Component{
           
            <Switch>
                <Route path='/' exact render={()=><Homepage langObj={{language:this.state.language}}/>}/>
-               <Route path='/features' render={()=><Features langObj={{language:this.state.language}}/>}/>
-               <Route path='/contact-us' render={()=><ContactPage langObj={{language: this.state.language}}/>}/>
+               <Route path='/features' exact render={()=><Features langObj={{language:this.state.language}}/>}/>
+               <Route path='/contact-us' exact render={()=><ContactPage langObj={{language: this.state.language}}/>}/>
                <Route path='/portal' exact render={()=><Portal langObj={{language: this.state.language}}/>}/>
-               <Route path='/portal/sign-up' render={()=><SignUp langObj={{language: this.state.language}}/>}/>
+               <Route path='/portal/sign-up' exact render={()=><SignUp langObj={{language: this.state.language}}/>}/>
            </Switch>
            {<Footer langObj={{language: this.state.language}}/>}
             </div> 
