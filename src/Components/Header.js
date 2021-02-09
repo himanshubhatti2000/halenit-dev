@@ -84,7 +84,7 @@ class Header extends Component{
         this.languageSwitch()
         return(
             <>
-            <div className="header-container" id="headerContainer">
+            <header className="header-container" id="headerContainer">
            <div className="Header" id="myHeader">
            <Link to='/'>
            <div className="logo" onClick={()=>{this.hideNavBar()}}>
@@ -95,7 +95,7 @@ class Header extends Component{
                </div>
                </Link>
                <input type="checkbox" id="check"/>
-           <div className="tel-no">{this.call}: 43434354355</div>
+           <div className="tel-no"><a href="tel:+44 345 678 903">{this.call} :+44 345 678 903</a></div>
           
            <ul className="nav-bar" id="navBar" onClick={()=>{this.hideNavBar()}}>
                <div><NavLink activeClassName="selectStyle" className="nav-link" to='/features'>{this.features}</NavLink></div>
@@ -112,7 +112,7 @@ class Header extends Component{
           
             <label htmlFor="check" className="mobile-menu" onClick={()=>{ this.movingDown()}} > </label>
            </div>
-           </div>
+           </header>
            
             </>
         )

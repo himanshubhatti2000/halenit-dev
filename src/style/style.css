@@ -16,6 +16,10 @@
     
 }
 /*Header */
+header a{
+    text-decoration: none;
+    color: white;
+}
 .header-container{
     position: fixed;
     width: 100%;
@@ -536,6 +540,10 @@ input:-webkit-autofill:active {
         display: flex;
         justify-content: space-between;
         font-size: 1.2vw;
+    }
+   footer a{
+        text-decoration: none;
+        color: white;
     }
 
     .links{

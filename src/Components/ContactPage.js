@@ -29,9 +29,9 @@ class ContactPage extends Component{
                 <HeadingContainer title={this.contactHeading} desc={this.contactText} loc="../assests/images/contact-us.svg" />
                 <div className="contact-container">
                 <div className="social-media-contact">
-                    <img src={insta} alt="instagram"/>
-                    <img src={twitter} alt="twitter"/>
-                    <img src={fb} alt="facebook"/>
+                   <a href="#" target="_blank"> <img src={insta} alt="instagram"/></a>
+                    <a href="#" target="_blank"><img src={twitter} alt="twitter"/></a>
+                    <a href="#" target="_blank"><img src={fb} alt="facebook"/></a>
                 </div>
                 <div className="contact-main">
                     <div className="tel-img">

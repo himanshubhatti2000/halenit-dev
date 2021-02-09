@@ -63,7 +63,6 @@ const emailRegex = RegExp(
         e.preventDefault();
         const { name, value } = e.target;
         let formErrors = { ...this.state.formErrors };
-    
         switch (name) {
           case "firstName":
             formErrors.firstName =
@@ -83,13 +82,16 @@ const emailRegex = RegExp(
             value.length < 10 ? "invalid PHone number" : "";
           break;
           case "password":
+        
             formErrors.confirmPassword =
-            value===this.state.password ? "":"Those passwords didn’t match. Try again.";
-            this.setState({ formErrors});
+            value===this.state.confirmPassword ? "":"Those passwords didn’t match. Try again.";
+  
+            this.setState({ formErrors: formErrors});
+         
             formErrors.password =
               value.length < 6 ? "minimum 6 characaters required" : "";
             break;
-          case "confirm Password":
+          case "confirmPassword":
                 formErrors.confirmPassword =
                  value===this.state.password ? "":"Those passwords didn’t match. Try again.";
                   //console.log(formErrors)
@@ -98,7 +100,6 @@ const emailRegex = RegExp(
           default:
             break;
         }
-    
         this.setState({ formErrors, [name]: value });
       }
     languageSwitch=()=>{

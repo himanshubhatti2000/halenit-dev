@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 class Footer extends Component{
     langSwitch(){
         if(this.props.langObj.language==="english"){
@@ -20,19 +21,20 @@ class Footer extends Component{
                     <div className="links">
                         <div className="contact-us">
                             <h1>{this.contactUsText}</h1>
-                            <h2>+44 345 678 903</h2>
-                            <h2>halenit@gmail.com</h2>
+                            <h2><a href="tel:+44 345 678 903">+44 345 678 903</a></h2>
+                            
+                            <h2><a href = "mailto: halenit@gmail.com">halenit@gmail.com</a></h2>
                         </div>
                         <div className="SERVICES">
                             <h1>{this.servicesText}</h1>
                             <h2>Personal Plan</h2>
                             <h2>Profesional Plan</h2>
                             <h2>Advance Plan</h2>
-                            <h2>Contact us</h2>
+                            <h2><Link to="/contact-us">Contact us</Link></h2>
                         </div>
                         <div className="information">
                             <h1>INFORMATION</h1>
-                            <h2>About Halen IT</h2>
+                            <h2><a href="/" onClick="window.open('#aboutUS)">About Halen IT </a></h2>
                             <h2>Work with us</h2>
                             <h2>Privacy Policy</h2>
                             <h2>Terms and Conditions</h2>
